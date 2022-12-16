@@ -1,9 +1,8 @@
-# README
+# FOOD ORDERING SYSTEM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This FOS focuses on building food ordering web application using HTML , Ruby on Rails, and Postgresql.
 
-Things you may want to cover:
+Things completed:
 
 * Ruby version
 
@@ -11,14 +10,18 @@ Things you may want to cover:
 
 * Configuration
 
+* Folder Structure
+
+* Controller Design
+
+Things Yet To Be Completed:
+
+* View Design
+
+* Active Records
+
 * Database creation
 
 * Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment
