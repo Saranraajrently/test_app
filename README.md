@@ -14,11 +14,11 @@ Things completed:
 
 * Controller Design
 
+* Active Records
+
 Things Yet To Be Completed:
 
 * View Design
-
-* Active Records
 
 * Database creation
 
