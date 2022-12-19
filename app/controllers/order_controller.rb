@@ -6,7 +6,7 @@ class OrderController < ApplicationController
     end
 
     def show 
-        @item=Item.find(params[:item_id])    
+        @item=Item.find(params[:id])    
         #Rails to find only item details that has id defined in params [:id]
     end
 
@@ -30,21 +30,21 @@ class OrderController < ApplicationController
     end
 
     def edit
-        @item=Item.find(params[:item_id])   # particular item is selected, and changes are updated to @item_type object
+        @item=Item.find(params[:id])   # particular item is selected, and changes are updated to @item_type object
         @item_type=ItemType.all
 
     end
 
     def delete
-        Item.find(params[:item_id]).destroy # destroy takes away the item from the database 
+        Item.find(params[:id]).destroy # destroy takes away the item from the database 
         redirect_to :action => 'list'
     end
 
     def update
-        @item = Item.find(params[:item_id])
+        @item = Item.find(params[:id])
 	
             if @item.update_attributes(book_param)   #update attribute takes values from form and gets updated in the database
-                redirect_to :action => 'show', :item_id => @item
+                redirect_to :action => 'show', :id => @item
             else
                 @item_type = ItemType.all
                 render :action => 'edit'
@@ -52,7 +52,7 @@ class OrderController < ApplicationController
     end
 
     def item_param     #item_param are defined here with their column names from database
-        params.require(:item).permit(:item_name,:item_price,:item_type,:item_id)
+        params.require(:item).permit(:item_name,:item_price,:item_type,:id)
     end
 
 end
