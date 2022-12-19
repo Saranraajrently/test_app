@@ -44,7 +44,7 @@ class OrderController < ApplicationController
         @item = Item.find(params[:id])
 	
             if @item.update_attributes(book_param)   #update attribute takes values from form and gets updated in the database
-                redirect_to :action => 'show', :item_id => @item
+                redirect_to :action => 'show', :id => @item
             else
                 @item_type = ItemType.all
                 render :action => 'edit'
